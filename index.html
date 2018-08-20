@@ -1,10 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
+  <title>Street Rock Paper Scissors</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -12,11 +12,119 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+
+  <div class="container">
+    <div class="row d-flex justify-content-around">
+      <div class="progress px-0 mt-5 bg-danger">
+        <div id="progressbarplayer" class="progress_bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+
+        </div>
+      </div>
+      <img src="img/versus.png" alt="versus" class="versus">
+      <div class="progress px-0 mt-5 bg-danger">
+        <div id="progressbarbot" class="progress_bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+
+        </div>
+      </div>
+      <div class="col-md-5 px-0 score_style"><p id="player_name" class="left_name colour_name"></p></div>
+      <div class="offset-md-2 col-md-5 score_style"><p class="text-right right_name colour_name">KEN</p></div>
+
+  </div>
+</div>
+
+
+    <div id="id_choice_pseudo" class="container-fluid pseudo bg-light text-center pt-5">
+      <div class="row mt-5 pt-5">
+
+        <div class="col-12 mt-5 pt-5">
+          <p class="text-center p_pseudo pt-5 mt-5">What's your name buddy ?</p>
+        </div>
+
+        <div class="col-12">
+          <input id="id_pseudo" class="input_pseudo w-50 text-center mx-auto" type ="text" placeholder=".........."/>
+        </div>
+
+        <div class="col-12">
+          <input id="btn_send" class="mt-2 w-25 btn_start" type="button" value="Start"/>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="restart" class="w-25 bg-light py-4 text-center">
+      <p id="result" class="text-center"></p>
+
+      <input id="btn_restart" class="mt-2" type="button" value="Just DO IT"/>
+
+    </div>
+
+  <div id="draw" >
+    <img src="img/draw.gif" alt="draw" class="img-fluid">
+  </div>
+  <p id="result_battle" class="text-white w-100 text-center"><span id="player_result"></span><span id="win_or_lose"></span> against <span id="computer_result"></p>
+
+<div class="container-fluid interface_container">
+  <div class="row">
+
+    <div class="player">
+      <img src="img/player_ryu.gif" alt="player" id="player_stand">
+      <img src="img/ryu_cours.gif" alt="player" id="player_move">
+      <img src="img/ken_hit.gif" alt="ken_hurricane" id="ken_hit">
+      <img src="img/ryu_lose.gif" alt="ryu_lose" id="ryu_lose">
+    </div>
+
+
+    <div id= "choice_chifumi_player" class="choice_chifumi_player offset-md-3 col-md-3 ">
+
+      <div id="player_rock" class="choice_rock" onclick="compare('rock')">
+        <img id="image1" src="img/pierre.png"  alt="pierre" class="img-fluid mb-1">
+      </div>
+
+      <div id="player_paper" class="choice_paper" onclick="compare('paper')">
+        <img id="image2" src="img/feuilles.png" alt="feuille" class="img-fluid mb-1">
+      </div>
+
+      <div id="player_scissors" class="choice_scissors" onclick="compare('scissors')">
+        <img id="image3" src="img/ciseaux.png" alt="ciseaux" class="img-fluid mb-1">
+      </div>
+
+    </div>
+
+
+    <div class="choice_chifumi_pc col-md-3">
+
+      <div id="pc_rock" class="choice_rock ml-auto">
+        <img id="image4" src="img/pierre.png" alt="pierre" class="img-fluid mb-1">
+      </div>
+
+      <div id="pc_paper" class="choice_paper ml-auto">
+        <img id="image5" src="img/feuilles.png" alt="feuille" class="img-fluid mb-1">
+      </div>
+
+      <div id="pc_scissors" class="choice_scissors ml-auto">
+        <img id="image6" src="img/ciseaux.png" alt="ciseaux" class="img-fluid mb-1">
+      </div>
+
+    </div>
+
+
+    <div class="computer">
+      <img src="img/ordi_ken.gif" alt="computer" class="ken_stand" id="computer_stand">
+      <img src="img/ken_cours.gif" alt="computer_run" class="ken_move" id="computer_move">
+      <img src="img/ryu_hit.gif" alt="ryu_shoruken" id="ryu_hit">
+      <img src="img/ken_lose.gif" alt="ken_lose" id="ken_lose">
+    </div>
+
+  </div>
+</div>
+
+
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->

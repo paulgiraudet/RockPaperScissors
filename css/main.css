@@ -97,12 +97,211 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+   @font-face {
+       font-family: shoryuken;
+       src: url(Shoryuken.ttf);
+   }
 
+body{
+  overflow:hidden;
+  height:100vh;
+  background-image:url("../img/decors.gif");
+  background-size:cover;
+}
 
+.progress{
+  height:40px;
+  border:5px double white;
+  width:45%;
+}
 
+.progress_bar{
+  background-color:yellow;
+  transition:1s ease 2.5s;
+}
 
+.versus{
+  width:50px;
+  position:absolute;
+  top:48px;
+}
 
+.interface_container{
+  margin-top:20%;
+}
+.choice_rock img, .choice_paper img, .choice_scissors img{
+  width:75px;
+  border-radius: 100%;
+}
 
+#result_battle{
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  background:transparent;
+  font-size:25px;
+  margin-top:-40px;
+}
+#restart{
+  position:absolute;
+  left:37.5%;
+  border:4px double black;
+}
+
+#draw{
+  position:absolute;
+  left:42.5%;
+}
+
+#image1,
+#image2,
+#image3{
+  cursor:pointer;
+  transition:all 0.3s;
+}
+
+#image1:hover,
+#image2:hover,
+#image3:hover{
+  border:4px dashed black;
+}
+
+#pc_rock, #pc_paper, #pc_scissors{
+  width:75px;
+}
+
+.computer{
+  margin-top:-35px;
+}
+
+.pseudo{
+  width:100%;
+  height:100vh;
+  background-image:url('../img/background_pseudo.jpg');
+  background-size:cover;
+  position:absolute;
+  top:0;
+}
+
+.p_pseudo{
+  color:white;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  font-size:55px;
+  font-family:shoryuken;
+}
+
+.input_pseudo{
+  border-radius:0;
+  height:70px;
+  font-family:shoryuken;
+  font-size:50px;
+  color:white;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  background:transparent;
+}
+
+.btn_start{
+  height:40px;
+}
+
+.score_style{
+  font-size:50px;
+  font-weight:bold;
+  font-family: shoryuken;
+}
+
+.colour_name{
+  background:-webkit-linear-gradient(#ffff00, #ff4500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* text-shadow: 4px 4px midnightblue; */
+}
+
+.left_name{
+  margin-left:30px;
+}
+.right_name{
+  margin-right:15px;
+}
+
+/* .colour_name {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffff00), color-stop(100%, #ff4500));
+	background-image: -webkit-linear-gradient(#ffff00,#ff4500);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: #fff;
+	position: relative;
+	text-shadow: none;
+}
+.colour_name:before {
+	background: none;
+	content: attr(data-text);
+  top: 0;
+  left: 0;
+	position: absolute;
+	text-shadow: 40px 40px midnightblue;
+	z-index: -1;
+} */
+
+.player, .computer{
+  position:relative;
+}
+
+.player img{
+  height:230px;
+}
+.ken_stand{
+  height:270px;
+  transform:rotateY(180deg);
+}
+.computer{
+  right:0;
+}
+
+.bg_middle{
+  background-image:url("../img/bg_middle.gif");
+  background-size: cover;
+
+}
+
+#player_move,
+#computer_move,
+#player_stand,
+#ryu_hit,
+#computer_stand,
+#ken_hit,
+#ryu_lose,
+#ken_lose{
+  position:absolute;
+}
+
+#ryu_hit{
+  height:400px;
+  top:-100px;
+  left:-90px;
+}
+
+#ken_hit{
+  transform:rotateY(180deg);
+  left:20px;
+}
+#player_move, #player_stand{
+  left: 50px;
+}
+
+#computer_stand, #computer_move{
+  right:-275px;
+}
+
+#computer_move{
+  transform:rotateY(180deg);
+  top:25px;
+}
+
+#ken_lose{
+  height:240px;
+  top:30px;
+  transform:rotateY(180deg);
+  left:-40px;
+}
 
 
 
