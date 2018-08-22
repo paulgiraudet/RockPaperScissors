@@ -117,7 +117,7 @@ body{
 
 .progress_bar{
   background-color:yellow;
-  transition:1s ease 2.5s;
+  transition:1s ease 0s;
 }
 
 .versus{

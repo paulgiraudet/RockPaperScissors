@@ -5,7 +5,6 @@ var choiceList = ['rock', 'paper', 'scissors'];
 
 
 //display none on useless stuff
-
 for (i=1;i<=6;i++){
   document.getElementById("image"+i).style.display = "none" ;
 }
@@ -88,6 +87,7 @@ function player_attack(){
 
       if (userScore == 1) {
         document.getElementById("progressbarbot").style.width="66%";
+
       }
       else if (userScore == 2) {
         document.getElementById("progressbarbot").style.width="33%";
